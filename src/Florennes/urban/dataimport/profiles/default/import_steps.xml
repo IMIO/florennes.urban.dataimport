@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<import-steps>
+
+ <import-step
+    id="Florennes.urban.dataimport-FlorennesUrbawebImport"
+    handler="Florennes.urban.dataimport.importer.importFlorennesUrbaweb"
+    title="Urbaweb import for Florennes">
+  Urbaweb import for Florennes
+ </import-step>
+
+</import-steps>

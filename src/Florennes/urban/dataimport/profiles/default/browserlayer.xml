@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<layers>
+  <layer
+      name="Florennes.urban.dataimport"
+      interface="Florennes.urban.dataimport.interfaces.IFlorennesUrbanDataimportLayer"
+  />
+</layers>
