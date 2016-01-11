@@ -9,6 +9,7 @@ from imio.urban.dataimport.acropole.settings import AcropoleImporterFromImportSe
 class FlorennesImporterSettingsForm(ImporterSettingsForm):
     """ """
 
+
 class FlorennesImporterSettings(ImporterSettings):
     """ """
     form = FlorennesImporterSettingsForm
