@@ -36,37 +36,35 @@ VALUES_MAPS = {
         -2982: ['UrbanCertificateOne', ''          ],
         -1972: ['ParcelOutLicence',    'lap'       ],
     }),
-"""
-    0
-    537481
-    585827
-    596954
-    598613
-    598861
-    599084
-    600326
-    3937207
-}),
-"""
+#    0
+#    537481
+#    585827
+#    596954
+#    598613
+#    598861
+#    599084
+#    600326
+#    3937207
+# }),
 
 # pour la reférence, virer le 'RA' ou 'RG'
 # pour la référence, reprendre la colonne DOSSIER_REFCOM
 
 # octroi/refus
 'state_map': {
-    -46: 'refuse',  # -46 = annulé par le FD
-    -49: 'accept',  # -49 = octroyé
-    -26: 'accept',  # -26 = octroyé
-    -19: 'retire',  # -19 = périmé
-    -14: 'accept',  # -14 = octroyé
-    -11: 'retire',  # -11 = retiré
-    -5: 'refuse',  # -5 = refusé
-    -4: 'retire',  # -4 = suspendu
-    -3: 'accept',  # -3 = octroyé
-    -2: 'retire',  # -2 = abandonné
-    -1: '',  # -1 = en cours
-    0: 'refuse',  # -1 = refusé
-    1: 'accept',  # 1 = octroyé
+    -46L: 'refuse',  # -46 = annulé par le FD
+    -49L: 'accept',  # -49 = octroyé
+    -26L: 'accept',  # -26 = octroyé
+    -19L: 'retire',  # -19 = périmé
+    -14L: 'accept',  # -14 = octroyé
+    -11L: 'retire',  # -11 = retiré
+    -5L: 'refuse',  # -5 = refusé
+    -4L: 'retire',  # -4 = suspendu
+    -3L: 'accept',  # -3 = octroyé
+    -2L: 'retire',  # -2 = abandonné
+    -1L: '',  # -1 = en cours
+    0L: 'refuse',  # -1 = refusé
+    1L: 'accept',  # 1 = octroyé
 },
 
 'division_map': {
@@ -82,6 +80,16 @@ VALUES_MAPS = {
     '10': '93031',
     '11': '93032',
 },
+
+'eventtype_id_map': table({
+'header'             : ['decision_event',                       'folder_complete',     'deposit_event',       'send_licence_applicant_event', 'send_licence_fd_event'],
+'BuildLicence'       : ['delivrance-du-permis-octroi-ou-refus', 'accuse-de-reception', 'depot-de-la-demande', 'envoi-du-permis-au-demandeur', 'envoi-du-permis-au-fd'],
+'ParcelOutLicence'   : ['delivrance-du-permis-octroi-ou-refus', 'accuse-de-reception', 'depot-de-la-demande', 'envoi-du-permis-au-demandeur', 'envoi-du-permis-au-fd'],
+'Declaration'        : ['deliberation-college',                 '',                    'depot-de-la-demande', '', ''],
+'MiscDemand'         : ['deliberation-college',                 '',                    'depot-de-la-demande', '', ''],
+'UrbanCertificateOne': ['octroi-cu1',                           '',                    'depot-de-la-demande', '', ''],
+'UrbanCertificateTwo': ['octroi-cu2',                           '',                    'depot-de-la-demande', '', ''],
+}),
 
 'titre_map': {
     -1000: 'mister',

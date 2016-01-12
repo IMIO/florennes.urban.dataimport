@@ -6,7 +6,7 @@ from Florennes.urban.dataimport.interfaces import IFlorennesDataImporter
 from Florennes.urban.dataimport.licences import valuesmapping
 
 from imio.urban.dataimport.acropole.importer import AcropoleDataImporter
-from imio.urban.dataimport.mapping import ValuesMapping
+from imio.urban.dataimport.acropole.importer import AcropoleValuesMapping
 
 
 class LicencesImporter(AcropoleDataImporter):
@@ -18,7 +18,7 @@ class LicencesImporter(AcropoleDataImporter):
         super(AcropoleDataImporter, self).__init__(db_name, table_name, key_column, savepoint_length)
 
 
-class LicencesValuesMapping(ValuesMapping):
+class LicencesValuesMapping(AcropoleValuesMapping):
     """ """
 
     def getValueMapping(self, mapping_name):
