@@ -4,26 +4,31 @@
 Notes:
 
 à reprendre:
-    - zonage au plan de secteur. Dans la table 'prc_data' lien via la parcelle.
+    - zonage au plan de secteur. Dans la table 'prc_data' lien via la parcelle. X
     - PCA , checker la valeur PPA 1, 2 ou 3 de la table 'schema'. les sous valeurs pour la zone de pca sont dans la table 'schemaaff'.
-      Encore chercher pour le lien avec les dossiers
-    - Lotissements: regarder les tables 'prc_lotiss', 'lot' (et 'k' 'k2' ??) il ya une colonne dossier_id dans la table 'lot'.
-    - Délai du dossier colonne 'DOSSIER_DELAI' de la table wrkdossier.
+      Encore chercher pour le lien avec les dossiers X
+    - Lotissements: regarder les tables 'prc_lotiss', 'lot' (et 'k' 'k2' ??) il ya une colonne dossier_id dans la table 'lot'. X
+    - Délai du dossier colonne 'DOSSIER_DELAI' de la table wrkdossier. X => basé sur les valeurs fournies par florennes
     - Adresse des travaux, vérifier pourquoi ça n'a pas marché.
     - Enquete publique:
         données dans 'wrkparam'
         retrouver le n° du dossier dans k2 (K2_ID = WRKPARAM_ID de 'wrkparam'), l'id du dossier est dans la colonne 'K_ID1' de la table k2
-        reprendre "object", articles et date de début et de fin d'enquête
-    - demandes d'avis: table 'wrkavis' colonne 'AVIS_DOSSIERID' pour lien avec id du dossier
-    - demande d'avis du FD idem que pour enquête publique (wrkparam rechercher 'avis préalable du FD')
-
+        reprendre "object", articles et date de début et de fin d'enquête C
+    - demandes d'avis: table 'wrkavis' colonne 'AVIS_DOSSIERID' pour lien avec id du dossier X
+    - demande d'avis du FD idem que pour enquête publique (wrkparam rechercher 'avis préalable du FD') C
     - pour les documents (table cremarq, colonne REAMRQ_DOC):
-        regarder l'id CREMARQ_ID, faire correspondre avec k2 dans la colonne K_ID2 (3eme) récuperer l'id du permis dans la 2eme colonne de k2 (K_ID1)
+        regarder l'id CREMARQ_ID, faire correspondre avec k2 dans la colonne K_ID2 (3eme) récuperer l'id du permis dans la 2eme colonne de k2 (K_ID1) : NA => pas de REMARQ_DOC liés aux dossiers :
+        SELECT * FROM urb93022ac.wrkdossier AS DOSSIER
+        INNER JOIN urb93022ac.k2 AS K2
+        ON K2.K_ID1 = DOSSIER.WRKDOSSIER_ID
+        INNER JOIN urb93022ac.cremarq AS CRE
+        ON K2.K_ID2 = CRE.CREMARQ_ID
+        WHERE CRE.REMARQ_DOC IS NOT NULL;
 
     - lettres de notaires:
         le classique: parcelle, adresse, ...
         demandeur = notaire
-        reprendre le document => cremarq nommé 'Annexe 49'
+        reprendre le document => cremarq nommé 'Annexe 49' C => aucune remarq_lib nommée annexe 49 de près ou de loin.
 """
 
 from imio.urban.dataimport.mapping import table
@@ -54,7 +59,7 @@ VALUES_MAPS = {
         -14179: ['Division',            ''          ],
         -13467: ['',                    'infraction'],  # infractions, ne pas reprendre
         -11889: ['BuildLicence',        'uap'       ],
-        -10362: ['MiscDemand',          'dpr'       ],  #  déclaration préalabe
+        -10362: ['BuildLicence',        'uap'       ],  #  déclaration préalabe
         -7812: ['Article127',           ''          ],
         -5976: ['',                     ''          ],  # permis d'environnement classe 3
         -5753: ['NotaryLetter',         ''          ],  # lettre de notaire, à faire!!
@@ -115,6 +120,7 @@ VALUES_MAPS = {
     'MiscDemand'         : ['deliberation-college',                 '',                    'depot-de-la-demande', '', ''],
     'UrbanCertificateOne': ['octroi-cu1',                           '',                    'depot-de-la-demande', '', ''],
     'UrbanCertificateTwo': ['octroi-cu2',                           '',                    'depot-de-la-demande', '', ''],
+    'NotaryLetter'       : ['octroi-lettre-notaire',                '',                    'depot-de-la-demande', '', ''],
 }),
 
 'titre_map': {
