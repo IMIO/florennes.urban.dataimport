@@ -25,8 +25,8 @@ FIELDS_MAPPINGS = {
 
             ParcellingMapper: {
                 'table': 'urblot',
-                'from': ('URBLOT_ID', 'LOT_NUM', 'LOT_NOM', 'LOT_DATE', 'LOT_NBLOT'),
-                'to': ('id', 'label', 'subdividerName', 'authorizationDate', 'numberOfParcels')
+                'from': ('URBLOT_ID', 'LOT_NUM', 'LOT_NOM', 'LOT_DATE', 'LOT_NBLOT',),
+                'to': ('id', 'label', 'subdividerName', 'authorizationDate', 'numberOfParcels',)
             },
         },
     },
@@ -47,12 +47,5 @@ FIELDS_MAPPINGS = {
                 },
             },
         },
-        # 'mappers': {
-        #     ParcelDataMapper: {
-        #         'table': 'prc_lotiss',
-        #         'from': ('PRCL_PRC',),
-        #         'to': ('division'),
-        #     },
-        # },
     },
 }
