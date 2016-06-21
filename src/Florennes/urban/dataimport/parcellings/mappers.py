@@ -10,8 +10,6 @@ from Products.CMFPlone.utils import normalizeString
 from imio.urban.dataimport.utils import CadastralReference
 from imio.urban.dataimport.utils import parse_cadastral_reference
 
-
-
 #
 # PARCELLINGS
 #

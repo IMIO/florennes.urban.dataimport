@@ -13,7 +13,7 @@ Notes:
     - Enquete publique:
         données dans 'wrkparam'
         retrouver le n° du dossier dans k2 (K2_ID = WRKPARAM_ID de 'wrkparam'), l'id du dossier est dans la colonne 'K_ID1' de la table k2
-        reprendre "object", articles et date de début et de fin d'enquête C
+        reprendre "object", articles et date de début et de fin d'enquête X
     - demandes d'avis: table 'wrkavis' colonne 'AVIS_DOSSIERID' pour lien avec id du dossier X
     - demande d'avis du FD idem que pour enquête publique (wrkparam rechercher 'avis préalable du FD') C
     - pour les documents (table cremarq, colonne REAMRQ_DOC):
