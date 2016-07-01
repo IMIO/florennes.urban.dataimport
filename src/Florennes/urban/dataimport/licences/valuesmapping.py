@@ -9,7 +9,7 @@ Notes:
       Encore chercher pour le lien avec les dossiers X
     - Lotissements: regarder les tables 'prc_lotiss', 'lot' (et 'k' 'k2' ??) il ya une colonne dossier_id dans la table 'lot'. X
     - Délai du dossier colonne 'DOSSIER_DELAI' de la table wrkdossier. X => basé sur les valeurs fournies par florennes
-    - Adresse des travaux, vérifier pourquoi ça n'a pas marché.
+    - Adresse des travaux, vérifier pourquoi ça n'a pas marché. C
     - Enquete publique:
         données dans 'wrkparam'
         retrouver le n° du dossier dans k2 (K2_ID = WRKPARAM_ID de 'wrkparam'), l'id du dossier est dans la colonne 'K_ID1' de la table k2
@@ -112,15 +112,15 @@ VALUES_MAPS = {
 },
 
 'eventtype_id_map': table({
-    'header'             : ['decision_event',                       'folder_complete',     'deposit_event',       'send_licence_applicant_event', 'send_licence_fd_event'],
-    'BuildLicence'       : ['delivrance-du-permis-octroi-ou-refus', 'accuse-de-reception', 'depot-de-la-demande', 'envoi-du-permis-au-demandeur', 'envoi-du-permis-au-fd'],
-    'ParcelOutLicence'   : ['delivrance-du-permis-octroi-ou-refus', 'accuse-de-reception', 'depot-de-la-demande', 'envoi-du-permis-au-demandeur', 'envoi-du-permis-au-fd'],
-    'Declaration'        : ['deliberation-college',                 '',                    'depot-de-la-demande', '', ''],
-    'Division'           : ['decision-octroi-refus',                '',                    'depot-de-la-demande', '', ''],
-    'MiscDemand'         : ['deliberation-college',                 '',                    'depot-de-la-demande', '', ''],
-    'UrbanCertificateOne': ['octroi-cu1',                           '',                    'depot-de-la-demande', '', ''],
-    'UrbanCertificateTwo': ['octroi-cu2',                           '',                    'depot-de-la-demande', '', ''],
-    'NotaryLetter'       : ['octroi-lettre-notaire',                '',                    'depot-de-la-demande', '', ''],
+    'header'             : ['decision_event',                       'folder_complete',     'deposit_event',       'send_licence_applicant_event', 'send_licence_fd_event', 'first_folder_transmitted_to_rw_event'],
+    'BuildLicence'       : ['delivrance-du-permis-octroi-ou-refus', 'accuse-de-reception', 'depot-de-la-demande', 'envoi-du-permis-au-demandeur', 'envoi-du-permis-au-fd', 'transmis-1er-dossier-rw'],
+    'ParcelOutLicence'   : ['delivrance-du-permis-octroi-ou-refus', 'accuse-de-reception', 'depot-de-la-demande', 'envoi-du-permis-au-demandeur', 'envoi-du-permis-au-fd', 'transmis-1er-dossier-rw'],
+    'Declaration'        : ['deliberation-college',                 '',                    'depot-de-la-demande', '', '', 'deliberation-college'],
+    'Division'           : ['decision-octroi-refus',                '',                    'depot-de-la-demande', '', '', 'decision-octroi-refus'],
+    'MiscDemand'         : ['deliberation-college',                 '',                    'depot-de-la-demande', '', '', 'deliberation-college'],
+    'UrbanCertificateOne': ['octroi-cu1',                           '',                    'depot-de-la-demande', '', '', 'octroi-cu1'],
+    'UrbanCertificateTwo': ['octroi-cu2',                           '',                    'depot-de-la-demande', '', '', 'octroi-cu2'],
+    'NotaryLetter'       : ['octroi-lettre-notaire',                '',                    'depot-de-la-demande', '', '', 'octroi-lettre-notaire'],
 }),
 
 'titre_map': {
