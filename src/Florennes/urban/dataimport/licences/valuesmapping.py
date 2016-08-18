@@ -60,7 +60,7 @@ VALUES_MAPS = {
         -14179: ['Division',            ''          ],
         -13467: ['',                    'infraction'],  # infractions, ne pas reprendre
         -11889: ['BuildLicence',        'uap'       ],
-        -10362: ['BuildLicence',        'uap'       ],  #  déclaration préalabe
+        -10362: ['MiscDemand',          'dpr'       ],  #  demande de principe
         -7812: ['Article127',           ''          ],
         -5976: ['',                     ''          ],  # permis d'environnement classe 3
         -5753: ['NotaryLetter',         ''          ],  # lettre de notaire, à faire!!
