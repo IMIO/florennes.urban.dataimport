@@ -4,19 +4,19 @@
 Notes:
 
 à reprendre:
-    - zonage au plan de secteur. Dans la table 'prc_data' lien via la parcelle. X
-    - PCA , checker la valeur PPA 1, 2 ou 3 de la table 'schema'. les sous valeurs pour la zone de pca sont dans la table 'schemaaff'.
-      Encore chercher pour le lien avec les dossiers X
-    - Lotissements: regarder les tables 'prc_lotiss', 'lot' (et 'k' 'k2' ??) il ya une colonne dossier_id dans la table 'lot'. X
-    - Délai du dossier colonne 'DOSSIER_DELAI' de la table wrkdossier. X => basé sur les valeurs fournies par florennes
-    - Adresse des travaux, vérifier pourquoi ça n'a pas marché. X
-    - Enquete publique:
+    X- zonage au plan de secteur. Dans la table 'prc_data' lien via la parcelle.
+    V- PCA , checker la valeur PPA 1, 2 ou 3 de la table 'schema'. les sous valeurs pour la zone de pca sont dans la table 'schemaaff'.
+      Encore chercher pour le lien avec les dossiers
+    X- Lotissements: regarder les tables 'prc_lotiss', 'lot' (et 'k' 'k2' ??) il ya une colonne dossier_id dans la table 'lot'.
+    X- Délai du dossier colonne 'DOSSIER_DELAI' de la table wrkdossier. X => basé sur les valeurs fournies par florennes
+    X- Adresse des travaux, vérifier pourquoi ça n'a pas marché.
+    X- Enquete publique: EnqDatDeb et Fin bien dans le catalogue mais pas affiché sur le site
         données dans 'wrkparam'
         retrouver le n° du dossier dans k2 (K2_ID = WRKPARAM_ID de 'wrkparam'), l'id du dossier est dans la colonne 'K_ID1' de la table k2
-        reprendre "object", articles et date de début et de fin d'enquête X
-    - demandes d'avis: table 'wrkavis' colonne 'AVIS_DOSSIERID' pour lien avec id du dossier X
-    - demande d'avis du FD idem que pour enquête publique (wrkparam rechercher 'avis préalable du FD') C
-    - pour les documents (table cremarq, colonne REAMRQ_DOC):
+        reprendre "object", articles et date de début et de fin d'enquête
+    X- demandes d'avis: table 'wrkavis' colonne '' pour lien avec id du dossier
+    C- demande d'avis du FD idem que pour enquête publique (wrkparam rechercher 'avis préalable du FD')
+    NA- pour les documents (table cremarq, colonne REAMRQ_DOC):
         regarder l'id CREMARQ_ID, faire correspondre avec k2 dans la colonne K_ID2 (3eme) récuperer l'id du permis dans la 2eme colonne de k2 (K_ID1) : NA => pas de REMARQ_DOC liés aux dossiers :
         SELECT * FROM urb93022ac.wrkdossier AS DOSSIER
         INNER JOIN urb93022ac.k2 AS K2
@@ -25,10 +25,11 @@ Notes:
         ON K2.K_ID2 = CRE.CREMARQ_ID
         WHERE CRE.REMARQ_DOC IS NOT NULL;
 
-    - lettres de notaires:
+    P- lettres de notaires:
         le classique: parcelle, adresse, ...
         demandeur = notaire
-        reprendre le document => cremarq nommé 'Annexe 49' C => aucune remarq_lib nommée annexe 49 de près ou de loin.
+        date octroi de la lettre d'info notariale (event)
+        reprendre le document => cremarq nommé 'Annexe 49' X => aucune remarq_lib nommée annexe 49 de près ou de loin.
 """
 
 from imio.urban.dataimport.mapping import table
@@ -87,7 +88,10 @@ VALUES_MAPS = {
     -26L: 'accept',  # -26 = octroyé
     -19L: 'retire',  # -19 = périmé
     -14L: 'accept',  # -14 = octroyé
+    -12L: 'accept',  # -12 = octroyé (validé par Fl)
     -11L: 'retire',  # -11 = retiré
+    -10L: 'retire',  # -10 = retiré (validé par Fl)
+    -6L: 'accept',  # -6 = octroyé (validé par Fl)
     -5L: 'refuse',  # -5 = refusé
     -4L: 'retire',  # -4 = suspendu
     -3L: 'accept',  # -3 = octroyé
