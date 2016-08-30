@@ -5,7 +5,7 @@ Notes:
 
 à reprendre:
     X- zonage au plan de secteur. Dans la table 'prc_data' lien via la parcelle.
-    V- PCA , checker la valeur PPA 1, 2 ou 3 de la table 'schema'. les sous valeurs pour la zone de pca sont dans la table 'schemaaff'.
+    X- PCA , checker la valeur PPA 1, 2 ou 3 de la table 'schema'. les sous valeurs pour la zone de pca sont dans la table 'schemaaff'.
       Encore chercher pour le lien avec les dossiers
     X- Lotissements: regarder les tables 'prc_lotiss', 'lot' (et 'k' 'k2' ??) il ya une colonne dossier_id dans la table 'lot'.
     X- Délai du dossier colonne 'DOSSIER_DELAI' de la table wrkdossier. X => basé sur les valeurs fournies par florennes
@@ -25,7 +25,7 @@ Notes:
         ON K2.K_ID2 = CRE.CREMARQ_ID
         WHERE CRE.REMARQ_DOC IS NOT NULL;
 
-    P- lettres de notaires:
+    X- lettres de notaires:
         le classique: parcelle, adresse, ...
         demandeur = notaire
         date octroi de la lettre d'info notariale (event)
