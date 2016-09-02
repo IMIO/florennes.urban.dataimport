@@ -125,6 +125,7 @@ VALUES_MAPS = {
     'UrbanCertificateOne': ['octroi-cu1',                           '',                    'depot-de-la-demande', '', '', ''],
     'UrbanCertificateTwo': ['octroi-cu2',                           '',                    'depot-de-la-demande', '', '', ''],
     'NotaryLetter'       : ['octroi-lettre-notaire',                '',                    'depot-de-la-demande', '', '', ''],
+    'Article127'       :   ['delivrance-du-permis-octroi-ou-refus', '',                    'depot-de-la-demande', '', '', ''],
 }),
 
 'titre_map': {
