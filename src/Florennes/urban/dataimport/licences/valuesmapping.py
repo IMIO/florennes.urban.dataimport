@@ -37,6 +37,8 @@ from imio.urban.dataimport.mapping import table
 VALUES_MAPS = {
     'type_map': table({
         'header': ['portal_type',         'foldercategory'],
+        -88291: ['',                    ''          ],  # Abattage d'arbre, ne pas reprendre ces dossiers
+        -67348: ['',                    ''          ],  # ne pas reprendre ces dossiers (DIVENV)
         -62737: ['ParcelOutLicence',    'lap'       ],
         -57728: ['',                    ''          ],  # ne pas reprendre ces dossiers
         -53925: ['',                    ''          ],  # Permis unique, ne pas reprendre ces dossiers
@@ -70,7 +72,7 @@ VALUES_MAPS = {
         0: ['',                         ''          ],  # ne pas reprendre ces dossiers
         537481: ['BuildLicence',        'uap'       ],
         585827: ['ParcelOutLicence',    'lap'       ],
-        596954: ['UrbanCertificateOne', ''          ], # A faire !!!
+        596954: ['UrbanCertificateOne', ''          ],  # A faire !!!
         598613: ['',                    ''          ],  # Permis unique classe 1, ne pas reprendre ces dossiers
         598861: ['',                    ''          ],  # Permis unqiue classe 2, ne pas reprendre ces dossiers
         599084: ['',                    ''          ],  # Classe 3, as reprendre ces dossiers
