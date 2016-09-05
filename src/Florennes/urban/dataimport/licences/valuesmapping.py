@@ -15,7 +15,7 @@ Notes:
         retrouver le n° du dossier dans k2 (K2_ID = WRKPARAM_ID de 'wrkparam'), l'id du dossier est dans la colonne 'K_ID1' de la table k2
         reprendre "object", articles et date de début et de fin d'enquête
     X- demandes d'avis: table 'wrkavis' colonne '' pour lien avec id du dossier
-    C- demande d'avis du FD idem que pour enquête publique (wrkparam rechercher 'avis préalable du FD')
+    V- demande d'avis du FD idem que pour enquête publique (wrkparam rechercher 'avis préalable du FD')
     NA- pour les documents (table cremarq, colonne REAMRQ_DOC):
         regarder l'id CREMARQ_ID, faire correspondre avec k2 dans la colonne K_ID2 (3eme) récuperer l'id du permis dans la 2eme colonne de k2 (K_ID1) : NA => pas de REMARQ_DOC liés aux dossiers :
         SELECT * FROM urb93022ac.wrkdossier AS DOSSIER
