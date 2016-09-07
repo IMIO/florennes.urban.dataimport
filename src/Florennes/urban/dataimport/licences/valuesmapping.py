@@ -139,6 +139,7 @@ VALUES_MAPS = {
     -1003: 'madam_and_mister',
     676263: 'madam_and_mister',
     850199: 'madam_and_mister',
+    89801: 'master',
 },
 
 }
