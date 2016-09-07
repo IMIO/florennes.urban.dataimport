@@ -45,11 +45,11 @@ VALUES_MAPS = {
         -52990: ['',                    ''          ],  # Article 65, ne pas reprendre ces dossiers
         -49306: ['Article127',          ''          ],
         -46623: ['',                    ''          ],  # permis d'environnement classe 3
-        -42575: ['BuildLicence',        ''          ],
+        -42575: ['BuildLicence',        'uap'       ],
         -40086: ['ParcelOutLicence',    'lap'       ],
         -37624: ['',                    ''          ],  # permis d'environnement classe 1
         -36624: ['',                    'infraction'],  # infractions, ne pas reprendre
-        -34766: ['NotaryLetter',        ''          ],  # lettre de notaire, à faire!!
+        -34766: ['NotaryLetter',        ''          ],  # lettre de notaire
         -28278: ['',                    ''          ],  # permis d'environnement classe 1
         -26124: ['ParcelOutLicence',    'lap'       ],
         -25638: ['MiscDemand',          'dpr'       ],
