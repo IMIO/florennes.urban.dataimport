@@ -40,12 +40,13 @@ Notes:
 
        A- permis accordés pour cette parcelle (dossier lié ?)
        X- titre
-       A- adresse postale (introuvable)
+       X- adresse postale (dans cloc pour demandeur et notaire)
     A- Divisions
        A- notaire lié (comment trouvé le notaire lié hors lettre notariale ?)
     A- Demande de principe
        X- zonage de plan de secteur
-       A- rapport du collègue
+       A- rapport du collège
+    X- adresse postale des travaux (dans adr)
 
 """
 
