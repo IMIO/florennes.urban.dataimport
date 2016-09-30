@@ -47,6 +47,10 @@ Notes:
        X- zonage de plan de secteur
        A- rapport du collège
     X- adresse postale des travaux (dans adr)
+    A Global
+        X Liste des notaires basés sur les CPSN_TYPE 89801 (et ajout si n'existe pas sur les lettres de notaires)
+        A EventDateDecision et EventDecision (peu d'infos à ce niveau, pas de match trouvé avec ETAPE comme l'eventDate) => demande chez eux
+        X Préchargement des architectes, link de ceux-ci si trouvé (idem que notaires)
 
 """
 
