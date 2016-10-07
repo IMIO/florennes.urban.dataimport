@@ -49,8 +49,17 @@ Notes:
     X- adresse postale des travaux (dans adr)
     A Global
         X Liste des notaires basés sur les CPSN_TYPE 89801 (et ajout si n'existe pas sur les lettres de notaires)
-        A EventDateDecision et EventDecision (peu d'infos à ce niveau, pas de match trouvé avec ETAPE comme l'eventDate) => demande chez eux
+        X EventDateDecision et EventDecision (peu d'infos à ce niveau, pas de match trouvé avec ETAPE comme l'eventDate) => demande chez eux
         X Préchargement des architectes, link de ceux-ci si trouvé (idem que notaires)
+        A copie de permis d'urbanisme, url du fichier dans burdoc :
+            SELECT * FROM urb93022ac_20160819.wrkdossier AS DOSSIER
+                INNER JOIN urb93022ac_20160819.k2 AS K2DOSSIER1
+                ON K2DOSSIER1.K_ID1 = DOSSIER.WRKDOSSIER_ID
+                INNER JOIN urb93022ac_20160819.k2 AS K2DOSSIER2
+                ON K2DOSSIER1.K_ID2 = K2DOSSIER2.K_ID1
+                INNER JOIN urb93022ac_20160819.burdoc AS DOC
+                ON K2DOSSIER2.K_ID2 = DOC.BURDOC_ID
+        ? pièces jointes dans wrkparam
 
 """
 
@@ -110,6 +119,7 @@ VALUES_MAPS = {
     -46L: 'refuse',  # -46 = annulé par le FD
     -49L: 'accept',  # -49 = octroyé
     -26L: 'accept',  # -26 = octroyé
+    # -20L: '', # chatelet => TODO validate
     -19L: 'retire',  # -19 = périmé
     -14L: 'accept',  # -14 = octroyé
     -12L: 'accept',  # -12 = octroyé (validé par Fl)
