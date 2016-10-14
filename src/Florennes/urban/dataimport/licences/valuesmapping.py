@@ -42,7 +42,7 @@ Notes:
        X- titre
        X- adresse postale (dans cloc pour demandeur et notaire)
     A- Divisions
-       A- notaire lié (comment trouvé le notaire lié hors lettre notariale ?)
+       A- notaire lié (comment trouver le notaire lié hors lettre notariale ?)
     A- Demande de principe
        X- zonage de plan de secteur
        A- rapport du collège
