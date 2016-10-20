@@ -176,11 +176,31 @@ VALUES_MAPS = {
         89801: 'master',
     },
 
+    # event name map dictionaries
     'event_deposit_name_map': {
         'BuildLicence': u'récépissé',
         'ParcelOutLicence': u'récépissé',
+        'Article127': '',
+        'NotaryLetter': u'Réception demande',
         'UrbanCertificateOne': u'réception demande',
         'UrbanCertificateTwo': u'réception demande',
+        'Declaration': u'dépôt ou envoi de la déclaration',
+        'Division': u'récépissé',
+        'ParcelOutLicence': u'récépissé',
+        'MiscDemand': u'récépissé',
+    },
+
+    'event_decision_name_map': {
+        'BuildLicence': u'délivrance permis',
+        'ParcelOutLicence': u'délivrance permis',
+        'Article127': u'délivrance du permis par le FD ou le Gvt wallon',
+        'NotaryLetter': '',
+        'UrbanCertificateOne': u'délivrance permis',
+        'UrbanCertificateTwo': u'Date CU2',
+        'Declaration': u'délivrance permis',
+        'Division': u'délivrance permis',
+        'ParcelOutLicence': u'délivrance permis',
+        'MiscDemand': u'délivrance permis',
     },
 
     # Misc. dictionaries
