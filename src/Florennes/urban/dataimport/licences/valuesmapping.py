@@ -67,48 +67,49 @@ from imio.urban.dataimport.mapping import table
 
 VALUES_MAPS = {
     'type_map': table({
-        'header': ['portal_type',         'foldercategory'],
-        -88291: ['',                    ''          ],  # Abattage d'arbre, ne pas reprendre ces dossiers
-        -67348: ['',                    ''          ],  # ne pas reprendre ces dossiers (DIVENV)
-        -62737: ['ParcelOutLicence',    'lap'       ],
-        -57728: ['',                    ''          ],  # ne pas reprendre ces dossiers
-        -53925: ['',                    ''          ],  # Permis unique, ne pas reprendre ces dossiers
-        -52990: ['',                    ''          ],  # Article 65, ne pas reprendre ces dossiers
-        -49306: ['Article127',          ''          ],
-        -46623: ['',                    ''          ],  # permis d'environnement classe 3
-        -42575: ['BuildLicence',        'uap'       ],
-        -40086: ['ParcelOutLicence',    'lap'       ],
-        -37624: ['',                    ''          ],  # permis d'environnement classe 1
-        -36624: ['',                    'infraction'],  # infractions, ne pas reprendre
-        -34766: ['NotaryLetter',        ''          ],  # lettre de notaire
-        -28278: ['',                    ''          ],  # permis d'environnement classe 1
-        -26124: ['ParcelOutLicence',    'lap'       ],
-        -25638: ['MiscDemand',          'dpr'       ],
-        -21454: ['',                    'reclam'    ],  # reclamations, ne pas reprendre
-        -20646: ['Article127',          ''          ],
-        -19184: ['',                    ''          ],  # permis d'environnement classe 2
-        -17277: ['BuildLicence',        'uap'       ],
-        -15200: ['Declaration',         ''          ],
-        -14333: ['',                    'reclam'    ],  # reclamations, ne pas reprendre
-        -14179: ['Division',            ''          ],
-        -13467: ['',                    'infraction'],  # infractions, ne pas reprendre
-        -11889: ['BuildLicence',        'uap'       ],
-        -10362: ['MiscDemand',          'dpr'       ],  #  demande de principe
-        -7812: ['Article127',           ''          ],
-        -5976: ['',                     ''          ],  # permis d'environnement classe 3
-        -5753: ['NotaryLetter',         ''          ],  # lettre de notaire
-        -3575: ['',                     ''          ],  # permis d'environnement classe 2
-        -2982: ['UrbanCertificateOne',  ''          ],  # A faire !!!
-        -1972: ['ParcelOutLicence',     'lap'       ],
-        0: ['',                         ''          ],  # ne pas reprendre ces dossiers
-        537481: ['BuildLicence',        'uap'       ],
-        585827: ['ParcelOutLicence',    'lap'       ],
-        596954: ['UrbanCertificateOne', ''          ],  # A faire !!!
-        598613: ['',                    ''          ],  # Permis unique classe 1, ne pas reprendre ces dossiers
-        598861: ['',                    ''          ],  # Permis unqiue classe 2, ne pas reprendre ces dossiers
-        599084: ['',                    ''          ],  # Classe 3, as reprendre ces dossiers
-        600326: ['Division',            ''          ],
-        3937207: ['',                   ''          ],  # Abattage d'arbre, ne pas reprendre ces dossiers
+        'header': ['portal_type', 'foldercategory'],
+        -88291: ['', ''],  # Abattage d'arbre, ne pas reprendre ces dossiers
+        -67348: ['', ''],  # ne pas reprendre ces dossiers (DIVENV)
+        -62737: ['ParcelOutLicence', 'lap'],
+        -57728: ['', ''],  # ne pas reprendre ces dossiers
+        -53925: ['', ''],  # Permis unique, ne pas reprendre ces dossiers
+        -52990: ['', ''],  # Article 65, ne pas reprendre ces dossiers
+        -49306: ['Article127', ''],
+        -46623: ['', ''],  # permis d'environnement classe 3
+        -42575: ['BuildLicence', 'uap'],
+        -40086: ['ParcelOutLicence', 'lap'],
+        -37624: ['', ''],  # permis d'environnement classe 1
+        -36624: ['', 'infraction'],  # infractions, ne pas reprendre
+        -34766: ['NotaryLetter', ''],  # lettre de notaire
+        -28278: ['', ''],  # permis d'environnement classe 1
+        -26124: ['ParcelOutLicence', 'lap'],
+        -25638: ['MiscDemand', 'dpr'],
+        -21454: ['', 'reclam'],  # reclamations, ne pas reprendre
+        -20646: ['Article127', ''],
+        -19184: ['', ''],  # permis d'environnement classe 2
+        -17277: ['BuildLicence', 'uap'],
+        -15200: ['Declaration', ''],
+        -14333: ['', 'reclam'],  # reclamations, ne pas reprendre
+        -14179: ['Division', ''],
+        -13467: ['', 'infraction'],  # infractions, ne pas reprendre
+        -11889: ['BuildLicence', 'uap'],
+        -10362: ['MiscDemand', 'dpr'],  # demande de principe
+        -7812: ['Article127', ''],
+        -5976: ['', ''],  # permis d'environnement classe 3
+        -5753: ['NotaryLetter', ''],  # lettre de notaire
+        -3575: ['', ''],  # permis d'environnement classe 2
+        -2982: ['UrbanCertificateOne', ''],  # A faire !!!
+        -1972: ['ParcelOutLicence', 'lap'],
+        0: ['', ''],  # ne pas reprendre ces dossiers
+        537481: ['BuildLicence', 'uap'],
+        585827: ['ParcelOutLicence', 'lap'],
+        596954: ['UrbanCertificateOne', ''],  # A faire !!!
+        598613: ['', ''],  # Permis unique classe 1, ne pas reprendre ces dossiers
+        598861: ['', ''],  # Permis unqiue classe 2, ne pas reprendre ces dossiers
+        599084: ['', ''],  # Classe 3, as reprendre ces dossiers
+        600326: ['Division', ''],
+        1057715: ['ParcelOutLicence', 'lap'],  # TODO id présent dans Châtelet : type permis d'urbanisation : à valider
+        3937207: ['', ''],  # Abattage d'arbre, ne pas reprendre ces dossiers
     }),
 
     # pour la reférence, virer le 'RA' ou 'RG'
@@ -121,7 +122,7 @@ VALUES_MAPS = {
         -46L: 'refuse',  # -46 = annulé par le FD
         -49L: 'accept',  # -49 = octroyé
         -26L: 'accept',  # -26 = octroyé
-        # -20L: '', # chatelet => TODO validate
+        -20L: '',  # chatelet => TODO validate
         -19L: 'retire',  # -19 = périmé
         -14L: 'accept',  # -14 = octroyé
         -12L: 'accept',  # -12 = octroyé (validé par Fl)
@@ -152,16 +153,19 @@ VALUES_MAPS = {
     },
 
     'eventtype_id_map': table({
-        'header'             : ['decision_event',                       'folder_complete',     'deposit_event',       'send_licence_applicant_event', 'send_licence_fd_event', 'first_folder_transmitted_to_rw_event'],
-        'BuildLicence'       : ['delivrance-du-permis-octroi-ou-refus', 'accuse-de-reception', 'depot-de-la-demande', 'envoi-du-permis-au-demandeur', 'envoi-du-permis-au-fd', 'transmis-1er-dossier-rw'],
-        'ParcelOutLicence'   : ['delivrance-du-permis-octroi-ou-refus', 'accuse-de-reception', 'depot-de-la-demande', 'envoi-du-permis-au-demandeur', 'envoi-du-permis-au-fd', 'transmis-1er-dossier-rw'],
-        'Declaration'        : ['deliberation-college',                 '',                    'depot-de-la-demande', '', '', ''],
-        'Division'           : ['decision-octroi-refus',                '',                    'depot-de-la-demande', '', '', ''],
-        'MiscDemand'         : ['deliberation-college',                 '',                    'depot-de-la-demande', '', '', ''],
-        'UrbanCertificateOne': ['octroi-cu1',                           '',                    'depot-de-la-demande', '', '', ''],
-        'UrbanCertificateTwo': ['octroi-cu2',                           '',                    'depot-de-la-demande', '', '', ''],
-        'NotaryLetter'       : ['octroi-lettre-notaire',                '',                    'depot-de-la-demande', '', '', ''],
-        'Article127'       :   ['delivrance-du-permis-octroi-ou-refus', '',                    'depot-de-la-demande', '', '', ''],
+        'header': ['decision_event', 'folder_complete', 'deposit_event', 'send_licence_applicant_event',
+                   'send_licence_fd_event', 'first_folder_transmitted_to_rw_event'],
+        'BuildLicence': ['delivrance-du-permis-octroi-ou-refus', 'accuse-de-reception', 'depot-de-la-demande',
+                         'envoi-du-permis-au-demandeur', 'envoi-du-permis-au-fd', 'transmis-1er-dossier-rw'],
+        'ParcelOutLicence': ['delivrance-du-permis-octroi-ou-refus', 'accuse-de-reception', 'depot-de-la-demande',
+                             'envoi-du-permis-au-demandeur', 'envoi-du-permis-au-fd', 'transmis-1er-dossier-rw'],
+        'Declaration': ['deliberation-college', '', 'depot-de-la-demande', '', '', ''],
+        'Division': ['decision-octroi-refus', '', 'depot-de-la-demande', '', '', ''],
+        'MiscDemand': ['deliberation-college', '', 'depot-de-la-demande', '', '', ''],
+        'UrbanCertificateOne': ['octroi-cu1', '', 'depot-de-la-demande', '', '', ''],
+        'UrbanCertificateTwo': ['octroi-cu2', '', 'depot-de-la-demande', '', '', ''],
+        'NotaryLetter': ['octroi-lettre-notaire', '', 'depot-de-la-demande', '', '', ''],
+        'Article127': ['delivrance-du-permis-octroi-ou-refus', '', 'depot-de-la-demande', '', '', ''],
     }),
 
     'titre_map': {
@@ -186,7 +190,6 @@ VALUES_MAPS = {
         'UrbanCertificateTwo': u'réception demande',
         'Declaration': u'dépôt ou envoi de la déclaration',
         'Division': u'récépissé',
-        'ParcelOutLicence': u'récépissé',
         'MiscDemand': u'récépissé',
     },
 
@@ -199,13 +202,12 @@ VALUES_MAPS = {
         'UrbanCertificateTwo': u'Date CU2',
         'Declaration': u'délivrance permis',
         'Division': u'délivrance permis',
-        'ParcelOutLicence': u'délivrance permis',
         'MiscDemand': u'délivrance permis',
     },
 
     # Misc. dictionaries
 
-    'solicitOpinionDictionary' : {
+    'solicitOpinionDictionary': {
         u"stp_eau": "stp",
         u"stp": "stp",
         u"stp_voirie": "stp",
@@ -232,7 +234,7 @@ VALUES_MAPS = {
         u"autres": "autres",
     },
 
-    'zoneDictionary' : {
+    'zoneDictionary': {
         u"zone d'habitat": "zh",
         u"zone d'habitat à caractère rural": "zhcr",
         u"zone d'habitat à caractère rural sur +/- 50 m et le surplus en zone agricole": "zhcrza",
@@ -301,7 +303,7 @@ VALUES_MAPS = {
         u"zone d'habitat sur 50 m de profondeur": "zhas50dp",
     },
 
-    'raw_pca_Dictionary' : {
+    'raw_pca_Dictionary': {
         u"ppa1part": "pca1",
         u"ppa1": "pca1",
         u"ppa1b": "pca1",
