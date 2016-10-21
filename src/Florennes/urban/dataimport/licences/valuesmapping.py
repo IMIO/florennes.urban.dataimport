@@ -191,7 +191,7 @@ VALUES_MAPS = {
         'UrbanCertificateTwo': u'réception demande',
         'Declaration': u'dépôt ou envoi de la déclaration',
         'Division': u'récépissé',
-        'MiscDemand': u'récépissé',
+        'MiscDemand': u'Accusé de réception',
     },
 
     'event_decision_name_map': {
@@ -203,7 +203,7 @@ VALUES_MAPS = {
         'UrbanCertificateTwo': u'Date CU2',
         'Declaration': u'délivrance permis',
         'Division': u'délivrance permis',
-        'MiscDemand': u'délivrance permis',
+        'MiscDemand': u'Délivrance autorisation',
     },
 
     # Misc. dictionaries
