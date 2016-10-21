@@ -108,7 +108,8 @@ VALUES_MAPS = {
         598861: ['', ''],  # Permis unqiue classe 2, ne pas reprendre ces dossiers
         599084: ['', ''],  # Classe 3, as reprendre ces dossiers
         600326: ['Division', ''],
-        1057715: ['ParcelOutLicence', 'lap'],  # TODO id présent dans Châtelet : type permis d'urbanisation : à valider
+        917233: ['BuildLicence', 'uap'], # TODO id présent dans Châtelet (RA-B): type permis d'urbanisme : à valider
+        1057715: ['ParcelOutLicence', 'lap'],  # TODO id présent dans Châtelet (RA-L): type permis d'urbanisation : à valider
         3937207: ['', ''],  # Abattage d'arbre, ne pas reprendre ces dossiers
     }),
 
