@@ -185,7 +185,7 @@ VALUES_MAPS = {
     'event_deposit_name_map': {
         'BuildLicence': u'récépissé',
         'ParcelOutLicence': u'récépissé',
-        'Article127': '',
+        'Article127': u'Début du dossier',
         'NotaryLetter': u'Réception demande',
         'UrbanCertificateOne': u'réception demande',
         'UrbanCertificateTwo': u'réception demande',
@@ -194,10 +194,22 @@ VALUES_MAPS = {
         'MiscDemand': u'Accusé de réception',
     },
 
-    'event_decision_name_map': {
+    'event_decision_date_map': {
         'BuildLicence': u'délivrance permis',
         'ParcelOutLicence': u'délivrance permis',
-        'Article127': u'délivrance du permis par le FD ou le Gvt wallon',
+        'Article127': [u'délivrance du permis par le FD ou le Gvt wallon', u'Délivrance permis'],
+        'NotaryLetter': '',
+        'UrbanCertificateOne': u'délivrance permis',
+        'UrbanCertificateTwo': u'Date CU2',
+        'Declaration': u'délivrance permis',
+        'Division': u'délivrance permis',
+        'MiscDemand': [u'Délivrance autorisation', u''],
+    },
+
+    'event_decision_map': {
+        'BuildLicence': u'Octroi du permis',
+        'ParcelOutLicence': u'Octroi du permis',
+        'Article127': u'OctroiPermis',
         'NotaryLetter': '',
         'UrbanCertificateOne': u'délivrance permis',
         'UrbanCertificateTwo': u'Date CU2',
