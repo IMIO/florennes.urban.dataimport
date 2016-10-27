@@ -185,7 +185,7 @@ VALUES_MAPS = {
     'event_deposit_name_map': {
         'BuildLicence': [u'récépissé'],
         'ParcelOutLicence': [u'récépissé'],
-        'Article127': [u'Début du dossier', u'dépôt dossier', u'réception de la demande du FD'],
+        'Article127': [u'Début du dossier', u'dépôt dossier', u'réception de la demande du FD', u'dossier complet'], # dossier complet ask by Florennes
         'NotaryLetter': [u'Réception demande'],
         'UrbanCertificateOne': [u'réception demande'],
         'UrbanCertificateTwo': [u'réception demande'],
