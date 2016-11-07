@@ -154,19 +154,16 @@ VALUES_MAPS = {
     },
 
     'eventtype_id_map': table({
-        'header': ['decision_event', 'folder_complete', 'deposit_event', 'send_licence_applicant_event',
-                   'send_licence_fd_event', 'first_folder_transmitted_to_rw_event'],
-        'BuildLicence': ['delivrance-du-permis-octroi-ou-refus', 'accuse-de-reception', 'depot-de-la-demande',
-                         'envoi-du-permis-au-demandeur', 'envoi-du-permis-au-fd', 'transmis-1er-dossier-rw'],
-        'ParcelOutLicence': ['delivrance-du-permis-octroi-ou-refus', 'accuse-de-reception', 'depot-de-la-demande',
-                             'envoi-du-permis-au-demandeur', 'envoi-du-permis-au-fd', 'transmis-1er-dossier-rw'],
-        'Declaration': ['deliberation-college', '', 'depot-de-la-demande', '', '', ''],
-        'Division': ['decision-octroi-refus', '', 'depot-de-la-demande', '', '', ''],
-        'MiscDemand': ['deliberation-college', '', 'depot-de-la-demande', '', '', ''],
-        'UrbanCertificateOne': ['octroi-cu1', '', 'depot-de-la-demande', '', '', ''],
-        'UrbanCertificateTwo': ['octroi-cu2', '', 'depot-de-la-demande', '', '', ''],
-        'NotaryLetter': ['octroi-lettre-notaire', '', 'depot-de-la-demande', '', '', ''],
-        'Article127': ['delivrance-du-permis-octroi-ou-refus', '', 'depot-de-la-demande', '', '', ''],
+        'header':               ['decision_event', 'folder_complete', 'deposit_event', 'send_licence_applicant_event', 'send_licence_fd_event', 'first_folder_transmitted_to_rw_event'],
+        'BuildLicence':         ['delivrance-du-permis-octroi-ou-refus', 'accuse-de-reception', 'depot-de-la-demande', 'envoi-du-permis-au-demandeur', 'envoi-du-permis-au-demandeur', 'envoi-du-permis-au-fd', 'transmis-1er-dossier-rw'],
+        'ParcelOutLicence':     ['delivrance-du-permis-octroi-ou-refus', 'accuse-de-reception', 'depot-de-la-demande', 'envoi-du-permis-au-demandeur', 'envoi-du-permis-au-demandeur', 'envoi-du-permis-au-fd', 'transmis-1er-dossier-rw'],
+        'Declaration':          ['deliberation-college', '', 'depot-de-la-demande', '', '', ''],
+        'Division':             ['decision-octroi-refus', '', 'depot-de-la-demande', '', '', ''],
+        'MiscDemand':           ['deliberation-college', '', 'depot-de-la-demande', '', '', ''],
+        'UrbanCertificateOne':  ['octroi-cu1', '', 'depot-de-la-demande', '', '', ''],
+        'UrbanCertificateTwo':  ['octroi-cu2', '', 'depot-de-la-demande', '', '', ''],
+        'NotaryLetter':         ['octroi-lettre-notaire', '', 'depot-de-la-demande', '', '', ''],
+        'Article127':           ['delivrance-du-permis-octroi-ou-refus', '', 'depot-de-la-demande', '', '', ''],
     }),
 
     'titre_map': {
@@ -184,19 +181,19 @@ VALUES_MAPS = {
     # event name map dictionaries
     'event_deposit_name_map': {
         'BuildLicence': [u'récépissé'],
-        'ParcelOutLicence': [u'récépissé'],
+        'ParcelOutLicence': [u'dépôt dossier', u'récépissé'],
         'Article127': [u'Début du dossier', u'dépôt dossier', u'réception de la demande du FD', u'dossier complet'], # dossier complet ask by Florennes
         'NotaryLetter': [u'Réception demande'],
         'UrbanCertificateOne': [u'réception demande'],
         'UrbanCertificateTwo': [u'réception demande'],
         'Declaration': [u'dépôt ou envoi de la déclaration'],
-        'Division': [u'récépissé'],
+        'Division': [u'Réception avis de division du notaire'],
         'MiscDemand': [u'Accusé de réception', u'réception demande'],
     },
 
     'event_decision_date_map': {
         'BuildLicence': [u'délivrance permis'],
-        'ParcelOutLicence': [u'délivrance permis'],
+        'ParcelOutLicence': [u"délivrance modification permis d'urbanisation", u"délivrance permis d'urbanisation" ],
         'Article127': [u'délivrance du permis par le FD ou le Gvt wallon', u'Délivrance permis'],
         'NotaryLetter': '',
         'UrbanCertificateOne': [u'CU1'],
@@ -208,7 +205,7 @@ VALUES_MAPS = {
 
     'event_decision_map': {
         'BuildLicence': [u'Octroi du permis'],
-        'ParcelOutLicence': [u'Octroi du permis'],
+        'ParcelOutLicence': [u"octroi du permis d'urbanisation"],
         'Article127': [u'Octroi du permis', u'OctroiPermis' , u'octroi permis'],
         'NotaryLetter': '',
         'UrbanCertificateOne': [u'CU1'],
