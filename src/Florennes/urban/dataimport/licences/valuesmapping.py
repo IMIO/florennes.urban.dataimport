@@ -421,4 +421,17 @@ VALUES_MAPS = {
         u"ppa3mod": "pca3",
     },
 
+    'contact_Proprietary_List': {
+        'UrbanCertificateOne', 'UrbanCertificateTwo', 'Division',
+    },
+
+    # Simple keys by locality
+    'pcaLikeType': 'PCA%',
+    'avisPrealableDuFD': u'%avis préalable du FD%',
+
+    'architects_cpsn_type': {353506, 4314287},
+    'architects_cpsn_type_like': '%architect%',
+
+    'notaire_cpsn_type': {89801},
+    'notaire_cpsn_type_like': '%notaire%',
 }
