@@ -407,7 +407,7 @@ VALUES_MAPS = {
         u"zone réservée aux constructions principales, en zone de cours et jardins et en voirie": "zresacprincezcejeev",
     },
 
-    'raw_pca_Dictionary': {
+    'raw_pca_List': {
         u"ppa1part": "pca1",
         u"ppa1": "pca1",
         u"ppa1b": "pca1",
@@ -426,7 +426,7 @@ VALUES_MAPS = {
     },
 
     # Simple keys by locality
-    'pcaLikeType': 'PCA%',
+    'pcaLikeType': 'PPA%',
     'avisPrealableDuFD': u'%avis préalable du FD%',
 
     'architects_cpsn_type': {353506, 4314287},
